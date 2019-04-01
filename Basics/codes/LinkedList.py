@@ -160,7 +160,34 @@ class DoublyLinkList(object):
             cur.next = node
             node.prev = cur
             node.next = next
-            next.prev = cur
+            next.prev = node
+
+    def remove_at_head(self):
+        cur = self.head
+        next = cur.next
+        self.head = next
+        cur.next = None
+        next.prev = None
+
+    def remove_item(self, item):
+        cur = self.head
+        if cur.item == item:
+            self.remove_at_head()
+        else:
+            while cur.item!=item:
+                cur = cur.next
+                if cur == None:
+                    print('No such item')
+                    return False
+            pre = cur.prev
+            next = cur.next
+            pre.next = next
+            if next != None:
+                next.prev = pre
+            cur.prev = None
+            cur.next = None
+
+
 
 def main_single():
     link_list = SinglyLinkList()
@@ -189,9 +216,9 @@ def main_double():
     link_list.insert_at_pos(3,2)
     link_list.traversal()
     # link_list.remove_at_head()
-    # link_list.traversal()
-    # link_list.remove_item(4)
-    # link_list.traversal()
+    link_list.traversal()
+    link_list.remove_item(2)
+    link_list.traversal()
     # print(link_list.search_item(2))
 if __name__ == '__main__':
     main_double()
