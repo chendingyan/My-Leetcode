@@ -7,25 +7,13 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        open_list = ['(','{','[']
-        close_list = [')','}',']']
+        dict = {"]": "[", "}": "{", ")": "("}
         stack = []
         for i in s:
-            if i in open_list:
+            if i in dict.values():
                 stack.append(i)
-            if i in close_list:
-                if i != stack.pop():
+            if i in dict.keys():
+                if stack == [] or dict[i] != stack.pop():
                     return False
-        return True
+        return stack == []
 
-    def match(self, x, y):
-        for i in range(3):
-            if x ==
-def main():
-    s = '[]'
-    s = str(s)
-    sol = Solution
-    sol.isValid(s)
-
-if __name__ == '__main__':
-    main()
