@@ -33,6 +33,21 @@ class Tree():
             self.preorder(root.lchild)
             self.preorder(root.rchild)
 
+    def inorder(self, root):
+        if not root:
+            return False
+        else:
+            self.inorder(root.lchild)
+            print(root.elem)
+            self.inorder(root.rchild)
+
+    def postorder(self,root):
+        if not root:
+            return False
+        else:
+            self.postorder(root.lchild)
+            self.postorder(root.rchild)
+            print(root.elem)
 
 if __name__ == '__main__':
     """主函数"""
@@ -42,3 +57,5 @@ if __name__ == '__main__':
         tree.add(elem)           #逐个添加树的节点
 
     tree.preorder(tree.root)
+
+    # tree.inorder(tree.root)
