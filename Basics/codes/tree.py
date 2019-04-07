@@ -33,6 +33,7 @@ class Tree():
             self.preorder(root.lchild)
             self.preorder(root.rchild)
 
+
 if __name__ == '__main__':
     """主函数"""
     elems = range(10)           #生成十个数据作为树节点
