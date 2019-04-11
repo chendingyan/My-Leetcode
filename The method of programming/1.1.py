@@ -12,3 +12,21 @@ def solution(str):
 str = 'abcdef'
 string = solution(str)
 print(string)
+
+# I am a student -> student. a am I
+# list.reverse()与 join两个函数
+def solution2(str):
+    ans =[]
+
+    strings = str.split(' ')
+    print(strings)
+    strings.reverse()
+    print(strings)
+    ans = ' '.join(strings)
+
+    return ans
+
+
+str = 'I am a student.'
+string =solution2(str)
+print(string)
