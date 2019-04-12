@@ -11,6 +11,13 @@
 # 要注意第一个节点 如果重复 不能 return pHead
 # 否则会出错
 # 这道题坑特别多 包括while 为什么要有cur的检查 以及其顺序 都会影响到不同的test case
+# 1）传NULL
+# 2）只有一个节点
+# 3）头节点开始就有重复
+# 4）中间节点重复
+# 5）尾部节点重复
+# 6）链表中没有重复链表
+# 7）所有节点都是重复的
 class Solution:
     def deleteDuplication(self, pHead):
         # write code here
