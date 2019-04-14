@@ -26,11 +26,8 @@ class Solution:
             temp = temp ^ i
         if temp == 0:
             return None
+        index = self.findindex(temp)
 
-        index = 0
-        while temp & 1 == 0:
-            temp = temp >>1
-            index+=1
 
         num1, num2 = 0,0
         for i in array:
@@ -40,13 +37,27 @@ class Solution:
                 num2 = num2 ^i
         return [num1, num2]
 
+    def findindex(self,num):
+        index = 0
+        while (num & 1) == 0:
+            index += 1
+            num = num >> 1
+        return index
+
+
+
     def Bitis1(self, index, num):
         num = num >> index
         return num & 1
 
+    # 7 = 2+4+1 = 0111
+    # 4 = 0100
+    # 4 ^ 7 = 0011 = 3 0011&1 = 0
 
 
 
-a = [1,2,3,1,2,4,3]
+
+a = [1,2,3,1,2,4,7,5,5,3]
 sol = Solution()
-sol.FindNumsAppearOnce1(a)
+ans = sol.FindNumsAppearOnce2(a)
+print(ans)
