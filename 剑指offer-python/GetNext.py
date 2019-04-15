@@ -21,16 +21,23 @@ class Solution:
                 rightnode = rightnode.left
             return rightnode
         else:
-            if pNode.next == None:
-                return None
-            if pNode.next.left == pNode:
-                return pNode.next
-            elif pNode.next.right == pNode:
-                parent = pNode.next
-                while parent.next!= None and parent.next.right == parent:
-                    parent = parent.next
-                if parent.next!= None and parent.next.left == parent:
-                    return parent.next
-                elif parent.next == None:
-                    return None
+            # 这一段考虑情况十分的复杂 但可以极其简单的化简成下面几句话
+            # if pNode.next == None:
+            #     return None
+            # if pNode.next.left == pNode:
+            #     return pNode.next
+            # elif pNode.next.right == pNode:
+            #     parent = pNode.next
+            #     while parent.next!= None and parent.next.right == parent:
+            #         parent = parent.next
+            #     if parent.next!= None and parent.next.left == parent:
+            #         return parent.next
+            #     elif parent.next == None:
+            #         return None
+            parent = pNode.next
+            while parent and parent.right == pNode:
+                pNode = parent
+                parent = parent.next
+            return parent
+
 
