@@ -4,7 +4,7 @@
 class Solution:
     def GetUglyNumber_Solution(self, index):
         # write code here
-        if index == 0
+        if index == 0:
             return 0
         i = 1
         ugly = [1]
