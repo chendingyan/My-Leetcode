@@ -87,8 +87,24 @@ class BST:
             self.postOrderTraverse(node.rchild)
             print(node.data)
 
+    def Serialize(self, root):
+        # write code here
+        serial = []
+        serial.append(root.data)
+        if root.lchild:
+            serial+=self.Serialize(root.lchild)
+        else:
+            serial.append('$')
+        if root.rchild:
+            serial+=self.Serialize(root.rchild)
+        else:
+            serial.append('$')
+        return serial
+
 a = [49, 38, 65, 97, 60, 76, 13, 27, 5, 1]
 bst = BST(a)  # 创建二叉查找树
-bst.inOrderTraverse(bst.root)  # 中序遍历
-bst.delete(bst.root, 49)
-bst.inOrderTraverse(bst.root)
+bst.preOrderTraverse(bst.root)
+# bst.delete(bst.root, 49)
+# bst.inOrderTraverse(bst.root)
+serial = bst.Serialize(bst.root)
+print(serial)
