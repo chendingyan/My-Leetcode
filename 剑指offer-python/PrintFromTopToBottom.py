@@ -12,18 +12,15 @@ class Solution:
     # 返回从上到下每个节点值列表，例：[1,2,3]
     def PrintFromTopToBottom(self, root):
         # write code here
-        res = []
-        if not root:
-            return res
-        bfs = [root]
-        while bfs:
-            tbfs = []
-            for node in bfs:
-                res.append(node.val)
-                if node.left:
-                    tbfs.append(node.left)
-                if node.right:
-                    tbfs.append(node.right)
-
-            bfs = tbfs[:]
-        return res
+        if root is None:
+            return []
+        queue = [root]
+        result = []
+        while queue:
+            node = queue.pop(0)
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
+            result.append(node.val)
+        return result
