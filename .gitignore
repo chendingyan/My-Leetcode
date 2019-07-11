@@ -66,3 +66,11 @@ pyvenv.cfg
 .venv
 pip-selfcheck.json
 
+.idea/inspectionProfiles/
+.idea/vcs.xml
+.idea/workspace.xml
+Basics/codes/.idea/inspectionProfiles/
+The method of programming/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdC/tmp/
+The method of programming/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdCXX/tmp/
+The method of programming/cmake-build-debug/CMakeFiles/CMakeTmp/
+production/nowcoder/python_version/
