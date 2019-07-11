@@ -44,6 +44,9 @@ public class Problem02_AppleMinBags {
 				System.out.println("error");
 			}
 		}
+		for(int i = 0; i <100; i++){
+			System.out.println(minBags(i));
+		}
 
 	}
 

@@ -30,10 +30,10 @@ public class Problem01_CordCoverMaxPoint {
 
 	public static void main(String[] args) {
 		int[] arr = { 0, 13, 24, 35, 46, 57, 60, 72, 87 };
-		int L = 6;
-
-		System.out.println(maxPoint(arr, L));
-
+		for(int L = 0; L <20; L++) {
+			System.out.println(L+ " " + maxPoint(arr, L));
+//			System.out.println(maxPoint(arr, L));
+		}
 	}
 
 }
