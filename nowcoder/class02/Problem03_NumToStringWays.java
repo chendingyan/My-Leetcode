@@ -1,5 +1,7 @@
 package class02;
 
+import java.util.Arrays;
+
 public class Problem03_NumToStringWays {
 
 	public static int convertWays(int num) {
@@ -44,6 +46,8 @@ public class Problem03_NumToStringWays {
 								: 0);
 			}
 		}
+		System.out.print(Arrays.toString(dp));
+
 		return dp[0];
 	}
 

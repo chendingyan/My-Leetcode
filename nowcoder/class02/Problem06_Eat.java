@@ -9,5 +9,9 @@ public class Problem06_Eat {
 			System.out.println("niu");
 		}
 	}
-
+	public static void main(String[] args) {
+		for (int i = 1; i < 20; i++){
+			printWinner(i);
+		}
+	}
 }

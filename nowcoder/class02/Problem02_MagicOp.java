@@ -61,8 +61,8 @@ public class Problem02_MagicOp {
 	}
 
 	public static void main(String[] args) {
-		int[] arr1 = { 1, 2, 5 };
-		int[] arr2 = { 2, 3, 4, 5, 6 };
+		int[] arr1 = { 2,3,1 };
+		int[] arr2 = { 1,3,4,6,2,5,8,11 };
 		System.out.println(maxOps(arr1, arr2));
 
 	}
