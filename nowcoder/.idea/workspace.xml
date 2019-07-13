@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e8ed934-0676-4cc3-a534-185b2e9e4f03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/python_version/class01/Problem03_ColorLeftRight.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../剑指offer-python/isNumeric.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../剑指offer-python/movingCount.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../剑指offer-python/str2int.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../The method of programming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../The method of programming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../The method of programming/cmake-build-debug/CMakeFiles/The_method_of_programming.dir/1.1.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../The method of programming/cmake-build-debug/CMakeFiles/The_method_of_programming.dir/1.1.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../The method of programming/cmake-build-debug/The_method_of_programming" beforeDir="false" afterPath="$PROJECT_DIR$/../The method of programming/cmake-build-debug/The_method_of_programming" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class01/Problem01_CordCoverMaxPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/class01/Problem01_CordCoverMaxPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class01/Problem02_AppleMinBags.java" beforeDir="false" afterPath="$PROJECT_DIR$/class01/Problem02_AppleMinBags.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../production/nowcoder/class01/Problem01_CordCoverMaxPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/../production/nowcoder/class01/Problem01_CordCoverMaxPoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../production/nowcoder/class01/Problem02_AppleMinBags.class" beforeDir="false" afterPath="$PROJECT_DIR$/../production/nowcoder/class01/Problem02_AppleMinBags.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class01/Problem06_UniqueBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/class01/Problem06_UniqueBST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class01/Problem07_NeedParentheses.java" beforeDir="false" afterPath="$PROJECT_DIR$/class01/Problem07_NeedParentheses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../production/nowcoder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../production/nowcoder/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../production/nowcoder/class01/Problem06_UniqueBST.class" beforeDir="false" afterPath="$PROJECT_DIR$/../production/nowcoder/class01/Problem06_UniqueBST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../production/nowcoder/class01/Problem07_NeedParentheses.class" beforeDir="false" afterPath="$PROJECT_DIR$/../production/nowcoder/class01/Problem07_NeedParentheses.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class01/Problem01_CordCoverMaxPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="195">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -38,7 +32,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class01/Problem02_AppleMinBags.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="675">
               <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
             </state>
           </provider>
@@ -47,17 +41,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class01/Problem04_MaxOneBorderSize.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="885">
+              <caret line="59" column="48" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/class01/Problem05_Rand5ToRand7.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="2" column="35" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/class01/Problem06_UniqueBST.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="99" column="9" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/class01/Problem07_NeedParentheses.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/class02/Problem01_SubvalueEqualK.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class01/Problem03_ColorLeftRight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="390">
+              <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -72,6 +102,8 @@
       <list>
         <option value="$PROJECT_DIR$/class01/Problem01_CordCoverMaxPoint.java" />
         <option value="$PROJECT_DIR$/class01/Problem02_AppleMinBags.java" />
+        <option value="$PROJECT_DIR$/class01/Problem06_UniqueBST.java" />
+        <option value="$PROJECT_DIR$/class01/Problem07_NeedParentheses.java" />
       </list>
     </option>
   </component>
@@ -86,7 +118,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="20" />
     <option name="y" value="43" />
     <option name="width" value="1400" />
@@ -98,6 +130,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,12 +143,16 @@
               <item name="nowcoder" type="462c0819:PsiDirectoryNode" />
               <item name="class01" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="nowcoder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nowcoder" type="462c0819:PsiDirectoryNode" />
+              <item name="class02" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -143,7 +180,7 @@
   </component>
   <component name="RunManager">
     <configuration name="test" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="class01.Problem03_ColorLeftRight" />
+      <option name="MAIN_CLASS_NAME" value="class01.Problem07_NeedParentheses" />
       <module name="nowcoder" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -162,18 +199,19 @@
       <updated>1562796035549</updated>
       <workItem from="1562796038405" duration="1252000" />
       <workItem from="1562797319884" duration="54000" />
-      <workItem from="1562797461690" duration="2892000" />
+      <workItem from="1562797461690" duration="5623000" />
+      <workItem from="1563021797367" duration="1486000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4198000" />
+    <option name="totallyTimeSpent" value="8415000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="20" y="43" width="1400" height="837" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2569956" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -182,7 +220,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32885906" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32771084" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -218,29 +256,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/class01/Problem01_CordCoverMaxPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/class01/Problem02_AppleMinBags.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="675">
           <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/class01/Problem04_MaxOneBorderSize.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="885">
+          <caret line="59" column="48" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/class01/Problem03_ColorLeftRight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="390">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class01/Problem05_Rand5ToRand7.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class01/Problem06_UniqueBST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="99" column="9" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class01/Problem07_NeedParentheses.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class02/Problem01_SubvalueEqualK.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="37" />
         </state>
       </provider>
     </entry>

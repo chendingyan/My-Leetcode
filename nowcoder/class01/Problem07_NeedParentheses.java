@@ -20,7 +20,8 @@ public class Problem07_NeedParentheses {
 	}
 
 	public static void main(String args[]) {
-
+		String str = "())(((((";
+		System.out.println(needParentheses(str));
 	}
 
 }

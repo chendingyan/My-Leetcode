@@ -95,12 +95,14 @@ public class Problem06_UniqueBST {
 	}
 
 	public static void main(String[] args) {
-		int n = 4;
-		System.out.println(numTrees(n));
-		List<Node> res = generateTrees(n);
-		for (Node node : res) {
-			printTree(node);
+		for (int n = 0; n < 12; n++){
+			System.out.println(numTrees(n));
 		}
+
+//		List<Node> res = generateTrees(n);
+//		for (Node node : res) {
+//			printTree(node);
+//		}
 	}
 
 }
