@@ -4,6 +4,7 @@
 *.class
 *.java
 *.xml
+.idea
 
 # Log file
 *.log
@@ -80,3 +81,4 @@ production/nowcoder/python_version/
 /nowcoder/class02/
 /nowcoder/class03/
 /nowcoder/.idea/
+nowcoder/python_version/class03/Problem01_PackingMachine.py
