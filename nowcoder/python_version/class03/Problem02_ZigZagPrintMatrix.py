@@ -32,13 +32,13 @@ def printLine(matrix, ax, ay, bx, by, revert):
     if revert == True:
         while ax <= bx and ay >= by:
             a = matrix[ax][ay]
-            print(a)
+            print(a, end = ' ')
             ax+=1
             ay-=1
     else:
         while ax <= bx and ay >= by:
             a = matrix[bx][by]
-            print(a)
+            print(a, end = ' ')
             bx-=1
             by+=1
 
