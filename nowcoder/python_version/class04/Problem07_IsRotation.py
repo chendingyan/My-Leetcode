@@ -10,10 +10,44 @@ def easypython(a,b):
         return True
     return False
 
+def gen_pnext(substring):
+    m = len(substring)
+    pnext = [0] * m
+    index = 0
+    i = 1
+    while i < m:
+        if substring[i] == substring[index]:
+            pnext[i] = index+1
+            i+=1
+            index+=1
+        elif index!=0:
+            index = pnext[index-1]
+        else:
+            pnext[i] = 0
+            i+=1
+    return pnext
+
 def kmp(a,b):
-    pass
+    a = a + a
+    pnext = gen_pnext(b)
+    n = len(a)
+    m = len(b)
+    i,j = 0,0
+    while i < n and j < m:
+        if a[i] == b[j]:
+            i+=1
+            j+=1
+        elif j!=0:
+            j = pnext[j-1]
+        else:
+            i+=1
+    if j == m:
+        return True
+    return False
+
 
 if __name__ == '__main__':
     a = "cdab"
-    b = "abcde"
+    b = "abcd"
     print(easypython(a,b))
+    print(kmp(a,b))
