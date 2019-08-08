@@ -1,7 +1,7 @@
 # 给定一个字符串类型的数组arr，求其中出现次数最多的前K个
 # 这个题很关键
 # 做法是hashmap统计 再加到一个大小为K的heap中 在python的实现中我们可以自己写一个heap实现加node
-
+import heapq
 class Node:
     def __init__(self, key, value):
         self.key = key
@@ -62,15 +62,26 @@ def topKtimes(arr,k):
         else:
             hash[i]+=1
     print(hash)
-
-    myheap = MyHeap(k)
-    for i in hash.items():
-        myheap.push(i[0], i[1])
-    myheap.print()
-
+    # for i in hash.items():
+    #     node = Node(i[0], i[1])
+    #
+    return hash
+    # myheap = MyHeap(k)
+    # for i in hash.items():
+    #     myheap.push(i[0], i[1])
+    # myheap.print()
 
 
 if __name__ == '__main__':
     # arr = [1,2,2,2,1,2,3,3,5,5,6,7,3,3,2,1,4,5,6,7,1,2,3,4,2,1,6,6,6,6,6]
     arr = ['a','a','a','b','b','b','b','c','c','d','d','d','d','d','d','e','e']
-    topKtimes(arr, 4)
+    hash =  topKtimes(arr, 4)
+    min_heap= [Node('None', -float('inf'))] * 3
+    heapq.heapify(min_heap)
+    for i in hash.items():
+        node = Node(i[0], i[1])
+        print(node)
+        if node > min_heap[0]:
+            heapq.heappop(min_heap)
+            heapq.heappush(min_heap, node)
+    print(min_heap[0], min_heap[1], min_heap[2])
