@@ -46,16 +46,33 @@ def NodeNumber2(root):
     else:
         return 2**(level-2) + NodeNumber(root.left)
 
+# 字节跳动新题 完全二叉树 最后一个节点 返回
+
+def getLastNode(root):
+    level = getLevel(root)
+
+    while root:
+        if level == 1:
+            return root
+
+        if getLevel(root.right) == level-1:
+            root = root.right
+        else:
+            root = root.left
+        level-=1
+    return root
 if __name__ == '__main__':
     head = Node(1)
     head.left = Node(2)
     head.right = Node(3)
     head.left.left = Node(4)
-    head.left.right = Node(5)
-    head.right.left = Node(6)
-    head.right.right = Node(7)
-    head.left.left.left = Node(8)
-    head.left.left.right = Node(9)
-    print(getLevel(head))
-    print(NodeNumber(head))
-    print(NodeNumber2(head))
+    # head.left.right = Node(5)
+    # head.right.left = Node(6)
+    # head.right.right = Node(7)
+    # head.left.left.left = Node(8)
+    # head.left.left.right = Node(9)
+    # print(getLevel(head))
+    # print(NodeNumber(head))
+    # print(NodeNumber2(head))
+    # print(None is None)
+    print(getLastNode(head).value)
