@@ -42,6 +42,29 @@ def getJobs(arr, ability):
         moneys.append(i[1])
     print(jobs, moneys)
 
+    ans = []
+    for ab in ability:
+        while ab > 0:
+            if jobs.__contains__(ab):
+                ans.append(moneys[jobs.index(ab)])
+                break
+            else:
+                ab-=1
+
+    print(ans)
+
+from collections import defaultdict
+def getJobs2(arr):
+    jobs = defaultdict(list)
+    for s in arr:
+        if s.hard not in jobs.keys():
+            jobs[s.hard] = s.money
+        elif jobs[s.hard] < s.money:
+            jobs[s.hard] = s.money
+    print(jobs)
+    print(sorted(jobs.items()))
+
+
 
 
 if __name__ == '__main__':
@@ -56,4 +79,3 @@ if __name__ == '__main__':
         ability.append(random.randrange(1, 5))
     print(ability)
     getJobs(arr, ability)
-
