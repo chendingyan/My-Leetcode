@@ -23,7 +23,7 @@ def EnvelopesProblem2(arr):
         while i != j:
             m = (i + j)//2
             if x > ends[m]:
-                i = i+1
+                i = m+1
             else:
                 j = m
         ends[i] = x
@@ -31,7 +31,69 @@ def EnvelopesProblem2(arr):
     print(ends, size)
     return size
 
+# 最后到信封问题 一个信封有两个信息 一个是长 一个是高
+# 给定 好多好多的信封 如果 A的长和高都小于B 那么A信封可以被装进 B信封里面 那么给你很多个信封 可以套几层
+# 这不就是一个Longest Increasing Subsequence 问题的变式吗
+# 但这里有技巧 先把信封 排序 按 长度 由小到大排序 长度一样的 按高度由大到小排序
+# 然后把高度数组拿出来 对高度数组 进行LIS 就是我们信封最多可以套几层 这个地方很关键 我直接拿LIS去做 是做不对这个题的 一定要这样预处理
+
+class Envelopes:
+    def __init__(self, l, h):
+        self.length = l
+        self.height = h
+    def __lt__(self, other):
+        return self.length < other.length and self.height < other.height
+
+    def __str__(self):
+        return "Length = " + str(self.length) + " Height = " + str(self.height)
+
+
+from functools import cmp_to_key
+def mycmp(a,b):
+    if a.length != b.length:
+        return a.length - b.length
+    else:
+        return b.height - a.height
+
+def EnvelopesProblem3(arr):
+    # sort
+    # arr = sorted(arr, cmp = mycmp)
+
+    arr.sort(key=cmp_to_key(mycmp))
+    height =[]
+    for i in range(len(arr)):
+        height.append(arr[i].height)
+        print(arr[i])
+    print(height)
+    # LIS 做法
+    ends = [None for i in range(len(height))]
+    size = 0
+    for x in height:
+        i = 0
+        j = size
+        while i != j:
+            m = (i+j)//2
+            if x > ends[m]:
+                i = m + 1
+            else:
+                j = m
+        ends[i] = x
+        size = max(i+1, size)
+    for i in ends:
+        print(i)
+    print(size)
+    return size
+
+
+
 if __name__ == '__main__':
     arr = [4,1,6,2,5,4,5]
     # EnvelopesProblem1(arr)
     EnvelopesProblem2([3,4,7,2,5])
+
+    test = [[3, 4 ], [ 2, 3 ], [ 4, 5 ], [ 1, 3 ], [ 2, 2 ], [ 3, 6 ], [ 1, 2 ], [ 3, 2 ], [ 2, 4 ] ]
+    arr = []
+    for i in test:
+        env = Envelopes(i[0], i[1])
+        arr.append(env)
+    EnvelopesProblem3(arr)
