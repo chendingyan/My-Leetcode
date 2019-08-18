@@ -13,6 +13,11 @@ def EnvelopesProblem1(arr):
     print(dp)
 
 # O(nlogn)解法 一个dp数组 一个ends数组 ends[i]表示 所有长度为i+1的子序列中结尾 最小的数字 dp还是表示扫描到arr[i]位置 目前最长子序列
+# 用ends数组来保存单调序列，这个序列并不是 最优值的单调序列，对于arr[i],如果比 ends 中的每个
+#
+# 数都大时放到 ends 后面，否则用arr[i]代替ends数组中第一个比arr[i]大的数，保持 ends 递增。这样
+#
+# 每一个arr[i]在ends的位置就是 dp[i] 的值。
 
 def EnvelopesProblem2(arr):
     ends = [None for i in range(len(arr))]
@@ -93,11 +98,11 @@ def EnvelopesProblem3(arr):
 if __name__ == '__main__':
     arr = [4,1,6,2,5,4,5]
     # EnvelopesProblem1(arr)
-    EnvelopesProblem2([3,4,7,2,5])
-
-    test = [[3, 4 ], [ 2, 3 ], [ 4, 5 ], [ 1, 3 ], [ 2, 2 ], [ 3, 6 ], [ 1, 2 ], [ 3, 2 ], [ 2, 4 ] ]
-    arr = []
-    for i in test:
-        env = Envelopes(i[0], i[1])
-        arr.append(env)
-    EnvelopesProblem3(arr)
+    EnvelopesProblem2(arr)
+    #
+    # test = [[3, 4 ], [ 2, 3 ], [ 4, 5 ], [ 1, 3 ], [ 2, 2 ], [ 3, 6 ], [ 1, 2 ], [ 3, 2 ], [ 2, 4 ] ]
+    # arr = []
+    # for i in test:
+    #     env = Envelopes(i[0], i[1])
+    #     arr.append(env)
+    # EnvelopesProblem3(arr)
