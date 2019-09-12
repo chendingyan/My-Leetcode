@@ -14,6 +14,36 @@ def ParDeep(str):
         if count > maxcount:
             maxcount = count
     return maxcount
+
+
+# 新问题 那么如果给一个可能合法可能非法的字符串 求其子串之中 深度最长的长度
+# 看到子串，看到子数组的大套路——想每个位置开头会怎么怎么样，每个位置结尾会怎么怎么样。
+# str = ')(()))()()(())' =》 8
+
+
+def longestValid(str):
+    dp = [0] * len(str)
+
+    for i in range(0, len(str)):
+        if str[i] == '(':
+            dp[i] = 0
+        elif str[i] == ')':
+            if i == 0:
+                dp[i] = 0
+            elif str[i-1] == '(':
+                dp[i] = 2
+                if i-2 >= 0 and dp[i-2] != 0:
+                    dp[i] += dp[i-2]
+
+            elif str[i-1] == ')':
+                if str[i-dp[i-1]-1] == '(':
+                    dp[i] = dp[i-1] +2
+                    if i - dp[i] >= 0 and dp[i- dp[i]] != 0:
+                        dp[i] += dp[i- dp[i]]
+    print(dp)
+
 if __name__ == '__main__':
     str = '((()))'
     print(ParDeep(str))
+    str = ')(()))()()(())'
+    longestValid(str)
