@@ -49,6 +49,9 @@ class ListNode:
         self.val = val
         self.next = next
 
+    def __repr__(self):
+        return str(self.val) + str(self.next)
+
 
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
@@ -58,4 +61,24 @@ class Solution:
         head.next.next = head
         head.next = None
         return last
+
+
 # leetcode submit region end(Prohibit modification and deletion)
+
+class SolutionIteration:
+    def reverseList(self, head):
+        pre = None
+        cur = head
+        next = head
+        while cur:
+            next = cur.next
+            cur.next = pre
+            pre = cur
+            cur = next
+        return pre
+
+
+if __name__ == '__main__':
+    sol = SolutionIteration()
+    head = ListNode(1, ListNode(2, ListNode(3, ListNode(4))))
+    print(sol.reverseList(head))
