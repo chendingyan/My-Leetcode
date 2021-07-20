@@ -33,49 +33,41 @@
 
 
 # leetcode submit region begin(Prohibit modification and deletion)
+from collections import Counter
+
+
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
-        # [left, right]
-        left = 0
-        right = 0
-        window = {}
-        need = {}
-        valid = 0
-        start = 0
-        min_len = len(s) + 1
-        window = dict.fromkeys(t, 0)
-        need = dict.fromkeys(t, 0)
-        for char in t:
-            need[char] += 1
-        while right != len(s):
-            if s[right] in window.keys():
-                window[s[right]] += 1
-                if window[s[right]] == need[s[right]]:
-                    valid += 1
-
-            right += 1
-
-            while valid == len(need):
-                if right - left < min_len:
-                    start = left
-                    min_len = right - left
-
-                if s[left] in window.keys():
-                    window[s[left]] -= 1
-                    if window[s[left]] < need[s[left]]:
-                        valid -= 1
-                left += 1
-        if min_len == len(s) + 1:
-            return ""
-        return s[start:start + min_len]
-
-
+        min_length = float('inf')
+        min_seq = ""
+        index = 0
+        need = Counter()
+        t_counter = Counter(t)
+        for i in range(len(s)):
+            if s[i] in t:
+                need[s[i]] += 1
+            while self.compare_counter(need.copy(), t_counter.copy()):
+                current_length = i - index + 1
+                if current_length < min_length:
+                    min_seq = s[index:i+1]
+                min_length = min(min_length, current_length)
+                if s[index] in t:
+                    need[s[index]] -= 1
+                    if need[s[index]] == 0:
+                        del need[s[index]]
+                index += 1
+        return min_seq
+    def compare_counter(self, need, t_counter):
+        for char in t_counter.keys():
+            if need[char] < t_counter[char]:
+                return False
+        return True
 # leetcode submit region end(Prohibit modification and deletion)
 
 if __name__ == '__main__':
     s = "ADOBECODEBANC"
     t = "ABC"
-    s = 'a'
-    t = 'a'
+    s = 'aa'
+    t = 'aa'
     sol = Solution()
     print(sol.minWindow(s, t))
