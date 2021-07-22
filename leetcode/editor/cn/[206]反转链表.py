@@ -54,13 +54,25 @@ class ListNode:
 
 
 class Solution:
-    def reverseList(self, head: ListNode) -> ListNode:
-        if not head or not head.next:
-            return head
-        last = self.reverseList(head.next)
-        head.next.next = head
-        head.next = None
-        return last
+    def reverseList(self, head):
+        current = head
+        pre = None
+        while current:
+            next_node = current.next
+            current.next = pre
+            pre = current
+            current = next_node
+        return pre
+
+
+# class Solution:
+#     def reverseList(self, head: ListNode) -> ListNode:
+#         if not head or not head.next:
+#             return head
+#         last = self.reverseList(head.next)
+#         head.next.next = head
+#         head.next = None
+#         return last
 
 
 # leetcode submit region end(Prohibit modification and deletion)
