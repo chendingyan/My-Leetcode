@@ -72,4 +72,21 @@
 #         self.right = right
 class Solution:
     def largestValues(self, root: TreeNode) -> List[int]:
+        queue = []
+        res = []
+        if not root:
+            return res
+        queue.append(root)
+        while queue:
+            layer = []
+            length = len(queue)
+            for i in range(length):
+                cur = queue.pop(0)
+                if cur.left:
+                    queue.append(cur.left)
+                if cur.right:
+                    queue.append(cur.right)
+                layer.append(cur.val)
+            res.append(max(layer))
+        return res
 # leetcode submit region end(Prohibit modification and deletion)
